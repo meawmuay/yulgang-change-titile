@@ -23,6 +23,7 @@ Partial Class FormMain
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormMain))
         Me.ListBoxTitleName = New System.Windows.Forms.ListBox()
         Me.ButtonChangeTitileName = New System.Windows.Forms.Button()
         Me.ButtonAdd = New System.Windows.Forms.Button()
@@ -134,6 +135,7 @@ Partial Class FormMain
         Me.Controls.Add(Me.ListBoxTitleName)
         Me.Controls.Add(Me.MenuStrip)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"),System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip
         Me.MaximizeBox = false
         Me.MinimizeBox = false

@@ -24,6 +24,17 @@
 
 ### หมายเหตุ
 ไฟล์ credit.vd คือไฟล์วีดีโอของหน้าเครดิต ทดลองเปลี่ยนชื่อเป็น credit.avi แล้วเปิดด้วยโปรแกรมเล่นวีดีโอตัวไหนก็ได้ สามารถลบทิ้งได้โดยไม่มีปัญหาใด ๆ
+
+ทำไมถึงขึ้นตามรายการด้านล่างนี้
+- Publisher : Unknown ในขณะที่เปิดโปรแกรม [(ตัวอย่าง)](https://i.imgur.com/peSlQDG.png "(ตัวอย่าง)")
+- ตอนดาวน์โหลดเสร็จ บราวเซอร์แจ้งว่า "ไฟล์นี้ไม่ได้มีการดาวน์โหลดเป็นที่แพร่หลายและอาจเป็นอันตราย" หรือ "This file is not commonly downloaded and may be dangerous." [(ตัวอย่าง)](https://i.imgur.com/FkxEtZs.png "(ตัวอย่าง)")
+
+เนื่องมาจาก ตัวโปรแกรมไม่ได้ Publish ด้วย Code Signing Certificate และตัวโปรแกรมต้องการสิทธิ์ Administrator เพื่อเข้าถึงฟังก์ชั่นตามด้านล่างนี้จาก Library user32.dll
+- FindWindow
+- SetWindowTextA
+- GetForegroundWindow
+- GetWindowText
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
